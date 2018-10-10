@@ -1,0 +1,10 @@
+<div class="packages">
+  <h2>Packages available:</h2>
+  <ngb-accordion *ngFor="let package of packages" #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel title="{{package.name}}              Filesize: {{package.size | filesize}}mb">
+      <ng-template ngbPanelContent>
+          <pre>{{package | json}}</pre>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
